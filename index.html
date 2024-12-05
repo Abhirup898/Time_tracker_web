@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tracking Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Time Tracking Application System</h1>
+
+        <!-- Form to Add New Time Entry -->
+        <div id="add-time-entry">
+            <form id="timeEntryForm">
+                <label for="projectName">Project Name</label>
+                <input type="text" id="projectName" required>
+                
+                <label for="taskDescription">Task Description</label>
+                <input type="text" id="taskDescription" required>
+                
+                <label for="startTime">Start Time</label>
+                <input type="datetime-local" id="startTime" required>
+                
+                <label for="endTime">End Time</label>
+                <input type="datetime-local" id="endTime" required>
+                
+                <button id="submit">Submit</button>
+            </form>
+        </div>
+
+        <!-- Update Form for Editing Time Entry -->
+        <form id="updateTimeEntryForm" style="display:none;">
+            <h2 style="text-align: center; color: #333;">Update Time Entry</h2>
+            <input type="hidden" id="updateEntryId">
+
+            <label for="updateProjectName">Project Name</label>
+            <input type="text" id="updateProjectName" placeholder="Project Name" required>
+            
+            <label for="updateTaskDescription">Task Description</label>
+            <input type="text" id="updateTaskDescription" placeholder="Task Description" required>
+            
+            <label for="updateStartTime">Start Time</label>
+            <input type="datetime-local" id="updateStartTime" required>
+            
+            <label for="updateEndTime">End Time</label>
+            <input type="datetime-local" id="updateEndTime" required>
+            
+            <button type="submit">Update</button>
+            <button type="button" onclick="cancelUpdate()">Cancel</button>
+        </form>
+
+        <!-- Time Entries List -->
+        <div id="time-entries" style="display:none;"> <!-- Hidden by default -->
+            <h2>Time Entries</h2>
+            <table id="entriesTable">
+                <thead>
+                    <tr>
+                        <th>Project Name</th>
+                        <th>Task</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <button id="generateReport">Generate Report</button>
+
+        <!-- Report Section (Initially Hidden) -->
+        <div id="task-report" style="display:none;">
+            <h2>Task Report</h2>
+            <table id="reportTable">
+                <thead>
+                    <tr>
+                        <th>Project Name</th>
+                        <th>Task</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Time Spent</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

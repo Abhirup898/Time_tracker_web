@@ -1,0 +1,234 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://cdn2.vectorstock.com/i/1000x1000/63/76/time-background-clocks-on-beige-background-vector-20506376.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  /* Container Styling */
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: rgba(180, 184, 183, 0.8);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+  /* Headings Styling */
+  h1, h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Specific Form Styling */
+  #add-time-entry {
+    margin-bottom: 40px;
+  }
+  
+ 
+  
+ 
+  #updateTimeEntryForm h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  /* Labels */
+  #updateTimeEntryForm label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #555;
+  }
+
+  /* Input Fields */
+  #updateTimeEntryForm input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+
+  
+
+  #updateTimeEntryForm button[type="button"] {
+    background-color: #f44336;
+  }
+
+  /* Hover Effect for Buttons */
+  #updateTimeEntryForm button:hover {
+    background-color: #45a049;
+  }
+
+  #updateTimeEntryForm button[type="button"]:hover {
+    background-color: #e53935;
+  }
+
+  /* Optional: Styling for Hidden State */
+  #updateTimeEntryForm.hidden {
+    display: none;
+  }
+  
+  #createTimeEntryForm {
+    display: block;
+  }
+  
+  /* Form Input and Button Styling */
+  input, button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Input Styling */
+  input {
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  
+  /* Button Styling */
+  button {
+    background-color: #5fb479;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #4a9e6c;
+  }
+  
+  /* Label Styling */
+  label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #555;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+  
+  /* Table Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #6dbecc;
+    color: white;
+    font-size: 16px;
+  }
+  
+  td {
+    color: #555;
+    font-size: 14px;
+  }
+  
+  /* Report Section Styling */
+ #time-entries{
+    display: none;
+    margin-top: 40px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  #task-report {
+    display: none;
+    margin-top: 40px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Generate Report Button Styling */
+  #generateReport {
+    padding: 12px 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 20px auto;
+    display: block;
+  }
+  
+  #generateReport:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    h1, h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+  
+    form {
+      gap: 15px;
+    }
+  
+    input, button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    table th, table td {
+      font-size: 12px;
+      padding: 10px;
+    }
+  
+    #generateReport {
+      font-size: 14px;
+      padding: 10px 16px;
+    }
+  }
